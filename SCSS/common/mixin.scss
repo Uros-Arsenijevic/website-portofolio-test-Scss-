@@ -1,0 +1,20 @@
+@mixin flex($display, $justifyContent, $alignItem) {
+  display: $display;
+  justify-content: $justifyContent;
+  align-items: $alignItem;
+}
+@mixin radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+}
+
+@mixin scale($num) {
+  transform: scale($num);
+  -webkit-transform: scale($num);
+  -moz-transform: scale($num);
+  -ms-transform: scale($num);
+  -o-transform: scale($num);
+}

@@ -1,0 +1,40 @@
+%button {
+  width: 100%;
+  height: 42px;
+  background-color: $main-color;
+  font-family: $Poppins;
+  font-size: 1.1rem;
+  border: none;
+  letter-spacing: 3%;
+  color: $white;
+  cursor: pointer;
+}
+%logo {
+  font-size: 48px;
+  font-family: Montserrat;
+  color: rgb(84, 84, 84);
+  line-height: 59px;
+  font-weight: 400;
+  position: relative;
+}
+%logo-before {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  left: -60px;
+  bottom: 5px;
+  background-color: $main-color;
+  border-radius: 50%;
+}
+%logo-first-Letter {
+  font-weight: bold;
+  color: $text-color;
+}
+%transition{
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
