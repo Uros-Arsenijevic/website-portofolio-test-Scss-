@@ -2,23 +2,91 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -28,8 +96,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -37,16 +114,21 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul,
+menu {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -56,13 +138,13 @@ table {
   border-spacing: 0;
 }
 
-header .content ul .downloadBtn, header .content .logo {
+header .header__content .desktop-menu .desktop-menu__button, header .header__content .logo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-header .content ul .downloadBtn {
+header .header__content .desktop-menu .desktop-menu__button {
   background-color: rgb(253, 111, 0);
   color: #fff;
   border-radius: 5px;
@@ -83,31 +165,28 @@ body {
   font-family: "Poppins";
 }
 
-.container {
+[class$=__container] {
   max-width: 1420px;
   width: 100%;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
 header {
   padding-top: 61px;
 }
-header .content {
+header .header__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header .content .logo {
+header .header__content .logo {
   color: rgb(66, 66, 66);
   font-size: 48px;
   font-family: "Montserrat";
   gap: 20px;
 }
-header .content .logo h3::first-letter {
-  color: #000;
-  font-weight: bold;
-}
-header .content .logo .circle {
+header .header__content .logo .logo__circle {
   width: 66px;
   height: 66px;
   background-color: rgb(253, 111, 0);
@@ -117,7 +196,11 @@ header .content .logo .circle {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-header .content ul {
+header .header__content .logo .logo__title::first-letter {
+  color: #000;
+  font-weight: bold;
+}
+header .header__content .desktop-menu {
   max-width: 1000px;
   width: 100%;
   display: flex;
@@ -126,16 +209,44 @@ header .content ul {
   height: 67px;
   font-size: 18px;
 }
-header .content ul li {
+header .header__content .desktop-menu .desktop-menu__item {
   padding: 10px 14px;
   font-weight: 500;
   cursor: pointer;
+  position: relative;
 }
-header .content ul .downloadBtn {
+header .header__content .desktop-menu .desktop-menu__item::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform-origin: left;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transition: ease-in-out 0.3s;
+  -webkit-transition: ease-in-out 0.3s;
+  -moz-transition: ease-in-out 0.3s;
+  -ms-transition: ease-in-out 0.3s;
+  -o-transition: ease-in-out 0.3s;
+}
+header .header__content .desktop-menu .desktop-menu__item:hover::after {
+  transform: scale(100%);
+  -webkit-transform: scale(100%);
+  -moz-transform: scale(100%);
+  -ms-transform: scale(100%);
+  -o-transform: scale(100%);
+}
+header .header__content .desktop-menu .desktop-menu__button {
   font-weight: 400;
   position: relative;
 }
-header .content ul .downloadBtn span {
+header .header__content .desktop-menu .desktop-menu__button span {
   position: absolute;
   z-index: 2;
   transition: ease-in-out 0.3s;
@@ -144,7 +255,7 @@ header .content ul .downloadBtn span {
   -ms-transition: ease-in-out 0.3s;
   -o-transition: ease-in-out 0.3s;
 }
-header .content ul .downloadBtn::before {
+header .header__content .desktop-menu .desktop-menu__button::before {
   content: "";
   width: 50%;
   height: 100%;
@@ -163,7 +274,7 @@ header .content ul .downloadBtn::before {
   -ms-transition: ease-in-out 0.3s;
   -o-transition: ease-in-out 0.3s;
 }
-header .content ul .downloadBtn::after {
+header .header__content .desktop-menu .desktop-menu__button::after {
   content: "";
   width: 50%;
   height: 100%;
@@ -182,22 +293,111 @@ header .content ul .downloadBtn::after {
   -ms-transition: ease-in-out 0.3s;
   -o-transition: ease-in-out 0.3s;
 }
-header .content ul .downloadBtn:hover::before {
+header .header__content .desktop-menu .desktop-menu__button:hover::before {
   transform: translate(0);
   -webkit-transform: translate(0);
   -moz-transform: translate(0);
   -ms-transform: translate(0);
   -o-transform: translate(0);
 }
-header .content ul .downloadBtn:hover::after {
+header .header__content .desktop-menu .desktop-menu__button:hover::after {
   transform: translate(0);
   -webkit-transform: translate(0);
   -moz-transform: translate(0);
   -ms-transform: translate(0);
   -o-transform: translate(0);
 }
-header .content ul .downloadBtn:hover span {
+header .header__content .desktop-menu .desktop-menu__button:hover span {
   color: rgb(253, 111, 0);
+}
+header .header__content .mobile-nav {
+  display: none;
+}
+header .header__content .mobile-nav .fa-bars {
+  font-size: 40px;
+  color: rgb(253, 111, 0);
+  cursor: pointer;
+}
+header .header__content .mobile-nav .mobile-menu {
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 0;
+  background-color: rgb(253, 111, 0);
+  width: 200px;
+  height: 100vh;
+}
+header .header__content .mobile-nav .mobile-menu .mobile-menu__close {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: none;
+  padding: 10px;
+}
+header .header__content .mobile-nav .mobile-menu .mobile-menu__close .fa-xmark {
+  font-size: 30px;
+  color: #fff;
+}
+header .header__content .mobile-nav .mobile-menu .mobile-menu__list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 90%;
+}
+header .header__content .mobile-nav .mobile-menu .mobile-menu__list .mobile-menu__item {
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 10%;
+}
+header .header__content .mobile-nav .mobile-menu .mobile-menu__list .mobile-menu__button {
+  width: 90%;
+  height: 40px;
+  background: #fff;
+  border: none;
+  border-radius: 5px;
+  color: rgb(253, 111, 0);
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (hover: hover) {
+  .mobile-menu__item:hover {
+    background: orange;
+  }
+}
+@media (hover: none) {
+  .mobile-menu__item:active {
+    background: orange;
+  }
+  .mobile-menu__button:active {
+    background: orange !important;
+    color: #fff !important;
+  }
+}
+@media (max-width: 860px) {
+  .header {
+    padding-top: 20px;
+  }
+  .header .logo__title {
+    font-size: 40px;
+  }
+  .header .desktop-menu {
+    display: none !important;
+  }
+  .header .mobile-nav {
+    display: block !important;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

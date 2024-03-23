@@ -22,25 +22,68 @@
     />
     <!-- CSS -->
     <link rel="stylesheet" href="style/style.css" />
+    <!-- JS -->
+    <script src="js/script.js" defer></script>
     <title>Personal Portfolio</title>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="content">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__content">
           <div class="logo">
-            <div class="circle"></div>
-            <h3>Mumair</h3>
+            <div class="logo__circle"></div>
+            <h3 class="logo__title">Mumair</h3>
           </div>
-          <ul>
-            <li>Home</li>
-            <li>About Me</li>
-            <li>Services</li>
-            <li>Projects</li>
-            <li>Testimonials</li>
-            <li>Contact</li>
-            <button class="downloadBtn"><span>Download CV</span></button>
+          <ul class="desktop-menu">
+            <li class="desktop-menu__item">Home</li>
+            <li class="desktop-menu__item">About Me</li>
+            <li class="desktop-menu__item">Services</li>
+            <li class="desktop-menu__item">Projects</li>
+            <li class="desktop-menu__item">Testimonials</li>
+            <li class="desktop-menu__item">Contact</li>
+            <button class="desktop-menu__button">
+              <span>Download CV</span>
+            </button>
           </ul>
+
+          <div class="mobile-nav">
+            <div class="mobile-nav__icon">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="mobile-menu">
+              <div class="mobile-menu__close">
+                <span><i class="fa-solid fa-xmark"></i></span>
+              </div>
+              <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                  <i class="fa-solid fa-house"></i>
+                  Home
+                </li>
+                <li class="mobile-menu__item">
+                  <i class="fa-solid fa-address-card"></i>
+                  About Me
+                </li>
+                <li class="mobile-menu__item">
+                  <i class="fa-solid fa-bell-concierge"></i>
+                  Services
+                </li>
+                <li class="mobile-menu__item">
+                  <i class="fa-solid fa-diagram-project"></i>
+                  Projects
+                </li>
+                <li class="mobile-menu__item">Testimonials</li>
+                <li class="mobile-menu__item">
+                  <i class="fa-solid fa-phone"></i>
+                  Contact
+                </li>
+                <button class="mobile-menu__button">
+                  <i class="fa-solid fa-cloud-arrow-down"></i>
+                  Download CV
+                </button>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </header>

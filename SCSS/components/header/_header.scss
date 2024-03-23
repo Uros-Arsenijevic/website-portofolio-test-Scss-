@@ -1,7 +1,8 @@
 header {
   padding-top: 61px;
-  .content {
+  .header__content {
     @include d-flex(flex, space-between, center);
+
     .logo {
       color: rgb(66, 66, 66);
       font-size: 48px;
@@ -9,12 +10,7 @@ header {
       @extend %df_center;
       gap: 20px;
 
-      h3::first-letter {
-        color: $text-color;
-        font-weight: bold;
-      }
-
-      .circle {
+      .logo__circle {
         width: 66px;
         height: 66px;
         background-color: $main-color;
@@ -24,21 +20,54 @@ header {
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
       }
+
+      .logo__title::first-letter {
+        color: $text-color;
+        font-weight: bold;
+      }
     }
-    ul {
+    .desktop-menu {
       max-width: 1000px;
       width: 100%;
       @include d-flex(flex, space-between, center);
       height: 67px;
       font-size: 18px;
 
-      li {
+      .desktop-menu__item {
         padding: 10px 14px;
         font-weight: 500;
         cursor: pointer;
+        position: relative;
+
+        &::after {
+          content: "";
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background-color: $text-color;
+          transform-origin: left;
+          transform: scale(0);
+          -webkit-transform: scale(0);
+          -moz-transform: scale(0);
+          -ms-transform: scale(0);
+          -o-transform: scale(0);
+          @include transition(0.3s);
+        }
+
+        &:hover {
+          &::after {
+            transform: scale(100%);
+            -webkit-transform: scale(100%);
+            -moz-transform: scale(100%);
+            -ms-transform: scale(100%);
+            -o-transform: scale(100%);
+          }
+        }
       }
 
-      .downloadBtn {
+      .desktop-menu__button {
         @extend %button;
         font-weight: 400;
         position: relative;
@@ -98,6 +127,66 @@ header {
           }
           span {
             color: $main-color;
+          }
+        }
+      }
+    }
+
+    .mobile-nav {
+      display: none;
+      .fa-bars {
+        font-size: 40px;
+        color: $main-color;
+        cursor: pointer;
+      }
+      .mobile-menu {
+        // display: none;
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        top: 0;
+        background-color: $main-color;
+        width: 200px;
+        height: 100vh;
+
+        .mobile-menu__close {
+          width: 100%;
+          @include d-flex(flex, end, none);
+          padding: 10px;
+
+          .fa-xmark {
+            font-size: 30px;
+            color: $white;
+          }
+        }
+
+        .mobile-menu__list {
+          @include d-flex(flex, space-around, center);
+          flex-direction: column;
+          height: 90%;
+
+          .mobile-menu__item {
+            font-size: 20px;
+            color: $white;
+            font-weight: bold;
+            @include d-flex(flex, center, center);
+            gap: 10px;
+            width: 100%;
+            height: 10%;
+          }
+
+          .mobile-menu__button {
+            width: 90%;
+            height: 40px;
+            background: $white;
+            border: none;
+            border-radius: 5px;
+            color: $main-color;
+            font-size: 18px;
+            font-weight: bold;
+            @include d-flex(flex, center, center);
+            gap: 10px;
+
           }
         }
       }
