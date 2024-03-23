@@ -1,0 +1,106 @@
+header {
+  padding-top: 61px;
+  .content {
+    @include d-flex(flex, space-between, center);
+    .logo {
+      color: rgb(66, 66, 66);
+      font-size: 48px;
+      font-family: $Montserrat-font;
+      @extend %df_center;
+      gap: 20px;
+
+      h3::first-letter {
+        color: $text-color;
+        font-weight: bold;
+      }
+
+      .circle {
+        width: 66px;
+        height: 66px;
+        background-color: $main-color;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+      }
+    }
+    ul {
+      max-width: 1000px;
+      width: 100%;
+      @include d-flex(flex, space-between, center);
+      height: 67px;
+      font-size: 18px;
+
+      li {
+        padding: 10px 14px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      .downloadBtn {
+        @extend %button;
+        font-weight: 400;
+        position: relative;
+        @extend %df_center;
+
+        span {
+          position: absolute;
+          z-index: 2;
+          @include transition(0.3s);
+        }
+
+        &::before {
+          content: "";
+          width: 50%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          background-color: $white;
+          transform: translateX(-100%);
+          -webkit-transform: translateX(-100%);
+          -moz-transform: translateX(-100%);
+          -ms-transform: translateX(-100%);
+          -o-transform: translateX(-100%);
+          @include transition(0.3s);
+        }
+        &::after {
+          content: "";
+          width: 50%;
+          height: 100%;
+          position: absolute;
+          right: 0;
+          top: 0;
+          background-color: $white;
+          transform: translateX(100%);
+          -webkit-transform: translateX(100%);
+          -moz-transform: translateX(100%);
+          -ms-transform: translateX(100%);
+          -o-transform: translateX(100%);
+          @include transition(0.3s);
+        }
+
+        &:hover {
+          &::before {
+            transform: translate(0);
+            -webkit-transform: translate(0);
+            -moz-transform: translate(0);
+            -ms-transform: translate(0);
+            -o-transform: translate(0);
+          }
+          &::after {
+            transform: translate(0);
+            -webkit-transform: translate(0);
+            -moz-transform: translate(0);
+            -ms-transform: translate(0);
+            -o-transform: translate(0);
+          }
+          span {
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}
