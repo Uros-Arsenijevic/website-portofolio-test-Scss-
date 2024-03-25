@@ -8,3 +8,12 @@ body {
   margin: 0 auto;
   padding: 0 10px;
 }
+
+*::selection {
+  background-color: $main-color;
+  color: $white;
+}
+
+* img {
+  user-select: none;
+}

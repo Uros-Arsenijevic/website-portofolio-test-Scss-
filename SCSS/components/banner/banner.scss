@@ -1,0 +1,111 @@
+.content {
+  @include d-flex(flex, space-between, center);
+  margin-top: 120px;
+
+  &__heading {
+    max-width: 714px;
+    width: 100%;
+
+    button {
+      margin-top: 22px;
+    }
+  }
+
+  &__title {
+    @extend %heading;
+    font-size: 24px;
+    line-height: 36px;
+
+    span {
+      color: $main-color;
+      line-height: 48px;
+      font-size: 32px;
+    }
+  }
+  &__description {
+    @extend %heading;
+    margin-top: 28px;
+    font-size: 21px;
+    line-height: 32px;
+    font-weight: 400;
+    text-align: justify;
+  }
+}
+
+.main-title {
+  display: flex;
+  flex-direction: column;
+  @extend %heading;
+  line-height: 90%;
+  text-transform: uppercase;
+  font-size: 100px;
+  font-weight: 700;
+
+  span:last-child {
+    text-transform: capitalize;
+    text-align: right;
+  }
+}
+
+.picture {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  > img {
+    position: absolute;
+    z-index: 2;
+    top: -70px;
+    right: -31.2px;
+  }
+  &::before {
+    content: "";
+    width: 374px;
+    height: 83px;
+    position: absolute;
+    top: 2%;
+    left: 10%;
+    background-color: $main-color;
+    opacity: 0.6;
+    z-index: 3;
+  }
+  &__content {
+    background: $white;
+    border: 5px solid $main-color;
+    box-shadow: inset 0px 6px 6px 0px rgba(0, 0, 0, 0.47);
+    height: 485px;
+    width: 485px;
+    position: relative;
+    @include radius(50%);
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -o-transform: translate(-50%, -50%);
+    }
+  }
+
+  &__social-network {
+    ol {
+      @include d-flex(flex, center, center);
+      gap: 25px;
+      font-size: 32px;
+
+      a {
+        color: $text-color;
+        @include transition(0.2s);
+
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+  }
+}

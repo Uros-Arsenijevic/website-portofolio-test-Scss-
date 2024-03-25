@@ -19,3 +19,13 @@
   font-size: 21px;
   overflow-x: hidden;
 }
+
+%heading {
+  font-size: 65px;
+  font-family: $main-font;
+  font-weight: 600;
+  line-height: 98px;
+  letter-spacing: 3%;
+  color: $text-color;
+}
+

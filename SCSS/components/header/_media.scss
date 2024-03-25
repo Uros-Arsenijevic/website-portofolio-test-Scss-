@@ -3,6 +3,10 @@
   .mobile-menu__item:hover {
     background: orange;
   }
+  .mobile-menu__button:hover {
+    background: orange !important;
+    color: $white !important;
+  }
 }
 @media (hover: none) {
   .mobile-menu__item:active {
@@ -15,20 +19,62 @@
   }
 }
 
-@include tablet {
+@include laptop-L {
   .header {
     padding-top: 20px;
+    .logo {
+      gap: 10px;
+      .logo__circle {
+        width: 50px;
+        height: 50px;
+      }
 
+      &__title {
+        font-size: 30px;
+      }
+    }
+    .desktop-menu {
+      justify-content: right;
+      gap: 18px;
+      &__item {
+        padding: 5px 7px;
+      }
+
+      &__button {
+        max-width: 150px;
+        width: 100%;
+        font-size: 18px;
+        letter-spacing: 0.3px;
+      }
+    }
+  }
+}
+
+@include laptop {
+  .header {
+    .desktop-menu {
+      gap: 23px;
+      &__item {
+        padding: 5px 0px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .desktop-menu {
+    display: none !important;
+  }
+
+  .mobile-nav {
+    display: block !important;
+  }
+}
+
+@include tablet {
+  .header {
     .logo__title {
       font-size: 40px;
-    }
-
-    .desktop-menu {
-      display: none !important;
-    }
-
-    .mobile-nav {
-      display: block !important;
     }
   }
 }
