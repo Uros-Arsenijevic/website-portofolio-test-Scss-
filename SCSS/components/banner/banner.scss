@@ -23,12 +23,8 @@
     }
   }
   &__description {
-    @extend %heading;
+    @extend %description;
     margin-top: 28px;
-    font-size: 21px;
-    line-height: 32px;
-    font-weight: 400;
-    text-align: justify;
   }
 }
 

@@ -1,0 +1,65 @@
+@use "./../../../node_modules/input-range-scss/inputrange"
+  with(
+    $thumb-color: rgb(237, 236, 236),
+    $thumb-shadow-size: 4px,
+    $thumb-shadow-blur: 7px,
+    $thumb-border-width: 3px,
+    $thumb-border-color: $main-color,
+    $thumb-height: 32px,
+    $thumb-width: 32px,
+    $thumb-radius: 50%,
+
+    // track
+    $track-color: rgb(192, 192, 192),
+    $track-height: 12px,
+    $track-shadow-size: 0,
+    $track-border-width: 0
+  );
+
+.aboutMe {
+  margin-top: 140px;
+  &__content {
+    @include d-flex(flex, space-between, center);
+    .picture {
+      position: relative;
+      > img {
+        padding: auto;
+        left: -98px;
+        top: -103px;
+        @include radius(60%);
+      }
+      &__content {
+        border: none;
+      }
+    }
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    p {
+      @extend %description;
+    }
+  }
+  &__title {
+    @extend %heading;
+  }
+  &__skills {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    dt {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 36px;
+    }
+  }
+  &__skill {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+}
