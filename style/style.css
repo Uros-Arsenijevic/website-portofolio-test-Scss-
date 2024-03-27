@@ -162,7 +162,7 @@ table {
   overflow-x: hidden;
 }
 
-.aboutMe__title, .main-title, .content__title {
+.list__description-title, .services__content .services__heading-title, .aboutMe__title, .main-title, .content__title {
   font-size: 65px;
   font-family: "Poppins";
   font-weight: 600;
@@ -171,7 +171,7 @@ table {
   color: #000;
 }
 
-.aboutMe__heading p, .content__description {
+.list__description-description, .services__content .services__heading-description, .aboutMe__heading p, .content__description {
   font-family: "Poppins";
   font-size: 21px;
   font-weight: 400;
@@ -190,6 +190,10 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0 10px;
+}
+
+.m_top139 {
+  margin-top: 139px;
 }
 
 *::selection {
@@ -737,6 +741,59 @@ body {
   display: flex;
   flex-direction: column;
   gap: 18px;
+}
+
+.services__content {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+.services__content .services__heading {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+.services__content .services__heading-description {
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 31px;
+}
+.list__item {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  max-width: 330px;
+  width: 100%;
+  height: 346px;
+  padding: 57px 18px 10px;
+  background: rgb(248, 248, 248);
+  border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+}
+.list__description {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.list__description-title {
+  font-size: 32px;
+  line-height: 48px;
+}
+.list__description-description {
+  font-size: 19px;
+  line-height: 29px;
 }
 
 /*# sourceMappingURL=style.css.map */
