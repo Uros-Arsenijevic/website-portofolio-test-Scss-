@@ -162,7 +162,7 @@ table {
   overflow-x: hidden;
 }
 
-.list__description-title, .services__content .services__heading-title, .aboutMe__title, .main-title, .content__title {
+.projects__header-heading, .list__description-title, .services__content .services__heading-title, .aboutMe__title, .main-title, .content__title {
   font-size: 65px;
   font-family: "Poppins";
   font-weight: 600;
@@ -171,7 +171,7 @@ table {
   color: #000;
 }
 
-.list__description-description, .services__content .services__heading-description, .aboutMe__heading p, .content__description {
+.project__item-title-name, .project__item-title-category, .projects__header-description, .list__description-description, .services__content .services__heading-description, .aboutMe__heading p, .content__description {
   font-family: "Poppins";
   font-size: 21px;
   font-weight: 400;
@@ -180,9 +180,17 @@ table {
   color: #000;
 }
 
+.project__item-title, .project__item, .projects__project, .projects {
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins";
-  scroll-behavior: smooth;
 }
 
 [class$=__container] {
@@ -794,6 +802,101 @@ body {
 .list__description-description {
   font-size: 19px;
   line-height: 29px;
+}
+
+.projects {
+  gap: 59px;
+}
+.projects__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 22px;
+}
+.projects__header-heading {
+  color: rgb(30, 30, 30);
+}
+.projects__header-description {
+  text-align: center;
+}
+.projects__project {
+  gap: 106px;
+}
+.projects__project-nav {
+  display: flex;
+  justify-content: center;
+  align-items: none;
+  gap: 17px;
+}
+.projects__project-nav input[name=check__project] {
+  display: none;
+}
+.projects__project-nav .checkbox__button {
+  padding: 10px 20px;
+  background: rgb(248, 248, 248);
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: 3%;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border: 0.4px solid rgb(84, 84, 84);
+  cursor: pointer;
+  user-select: none;
+}
+.projects__project-nav input[name=check__project]:checked + .checkbox__button {
+  background: rgb(253, 111, 0);
+  color: #fff;
+}
+
+.project {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.project__item {
+  max-width: 445px;
+  width: 100%;
+  height: 601px;
+  margin-bottom: 44px;
+  gap: 37px;
+}
+.project__item-picture {
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  width: 100%;
+  height: 489px;
+  position: relative;
+  display: flex;
+  justify-content: end;
+  background: rgb(255, 235, 219);
+}
+.project__item-picture img:first-child {
+  position: absolute;
+  bottom: -3px;
+  left: 39px;
+}
+.project__item-picture img:last-child {
+  margin-right: 27px;
+}
+.project__item-title {
+  gap: 10px;
+}
+.project__item-title-category {
+  font-size: 19px;
+  line-height: 29px;
+  color: rgb(253, 111, 0);
+}
+.project__item-title-name {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
 }
 
 /*# sourceMappingURL=style.css.map */

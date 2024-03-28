@@ -37,3 +37,8 @@
   letter-spacing: 3%;
   color: $text-color;
 }
+
+%flex_column{
+  display: flex;
+  flex-direction: column;
+}

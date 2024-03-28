@@ -1,6 +1,8 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: $main-font;
-  scroll-behavior: smooth;
 }
 
 [class$="__container"] {
@@ -9,7 +11,7 @@ body {
   margin: 0 auto;
   padding: 0 10px;
 }
-.m_top139{
+.m_top139 {
   margin-top: 139px;
 }
 
