@@ -1,9 +1,9 @@
-@mixin d-flex($display, $justifyContent, $alignItem){
+@mixin d-flex($display, $justifyContent: none, $alignItem: none) {
   display: $display;
   justify-content: $justifyContent;
   align-items: $alignItem;
 }
-@mixin transition($time){
+@mixin transition($time) {
   transition: ease-in-out $time;
   -webkit-transition: ease-in-out $time;
   -moz-transition: ease-in-out $time;
@@ -11,7 +11,7 @@
   -o-transition: ease-in-out $time;
 }
 
-@mixin radius($radius){
+@mixin radius($radius) {
   border-radius: $radius;
   -webkit-border-radius: $radius;
   -moz-border-radius: $radius;
