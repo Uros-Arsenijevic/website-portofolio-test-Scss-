@@ -16,27 +16,57 @@
   }
 }
 
-.comments__list {
-  @include d-flex(flex, center);
+.slider {
+  display: flex;
+  justify-content: center;
 
-  .comments__item {
+  &__track {
     max-width: 1087px;
     width: 100%;
     height: 344px;
+    position: relative;
 
-    @include d-flex(flex, center, center);
-    gap: 29px;
-    background: $content-color;
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(4, max-content);
+      grid-column-gap: 62px;
+      transition: 0.2s ease-in-out;
+      position: absolute;
+    }
   }
 }
-
+.slider-item {
+  @include d-flex(flex, center, center);
+  max-width: 1087px;
+  width: 100%;
+  height: 344px;
+  @include radius(14px);
+  gap: 29px;
+  background: $content-color;
+  opacity: 0.5;
+  padding: 0 72px;
+}
 .comment {
   &__text {
     @extend %description;
     color: $comment-text-color;
     letter-spacing: 2%;
 
+    &::before {
+      content: "“";
+      color: $main-color;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    &::after {
+      content: "“";
+      color: $main-color;
+      font-size: 32px;
+      font-weight: 700;
+    }
   }
+
   &__name {
     color: $text-color;
     font-size: 24px;
@@ -50,5 +80,34 @@
     font-weight: 400;
     line-height: 29px;
     letter-spacing: 2%;
+  }
+}
+.slider-item_active {
+  opacity: 1;
+}
+.element {
+  @include d-flex(flex, center, none);
+  gap: 9px;
+
+  &__item {
+    display: flex;
+    input {
+      display: none;
+    }
+
+    label {
+      display: block;
+      width: 57px;
+      height: 16px;
+      background: rgb(217, 217, 217);
+      @include radius(8px);
+      cursor: pointer;
+    }
+
+    input[type="radio"]:checked {
+      + label {
+        background-color: $main-color;
+      }
+    }
   }
 }
