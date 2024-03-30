@@ -39,9 +39,11 @@
             <li class="desktop-menu__item"><a href="#aboutMe">About Me</a></li>
             <li class="desktop-menu__item"><a href="#services">Services</a></li>
             <li class="desktop-menu__item"><a href="#projects">Projects</a></li>
-            <li class="desktop-menu__item"><a href="#">Testimonials</a></li>
-            <li class="desktop-menu__item"><a href="#">Contact</a></li>
-            <button class="desktop-menu__button">
+            <li class="desktop-menu__item">
+              <a href="#testimonials">Testimonials</a>
+            </li>
+            <li class="desktop-menu__item"><a href="#contact">Contact</a></li>
+            <button class="main__button">
               <span>Download CV</span>
             </button>
           </ul>
@@ -107,7 +109,7 @@
                 <br />
                 Turpis tempus pharetra
               </p>
-              <button class="desktop-menu__button">
+              <button class="main__button">
                 <span>Here Me</span>
               </button>
             </div>
@@ -116,7 +118,7 @@
               <div class="picture__content">
                 <img src="picture/preson.png" alt="my_photo" />
               </div>
-              <div class="picture__social-network">
+              <div class="social-network">
                 <ol>
                   <li>
                     <a href="https://www.facebook.com/" target="_blank">
@@ -439,7 +441,7 @@
           </ol>
         </div>
       </section>
-      <section class="testimonials m_top139">
+      <section class="testimonials m_top139" id="testimonials">
         <header class="testimonials__header">
           <h2 class="testimonials__title">Testimonials</h2>
           <p class="testimonials__description">
@@ -452,7 +454,6 @@
           <div class="slider__track">
             <ol class="slider__track-list">
               <li class="slider-item slider-item_active">
-
                 <div class="slider__item-profile">
                   <img src="picture/profile-picture/profile1.png" alt="" />
                 </div>
@@ -470,7 +471,6 @@
                 </div>
               </li>
               <li class="slider-item">
-                
                 <div class="slider__item-profile">
                   <img src="picture/profile-picture/profile2.png" alt="" />
                 </div>
@@ -526,7 +526,7 @@
         </div>
         <div class="element">
           <div class="element__item">
-            <input type="radio" name="comments" id="comment1" checked/>
+            <input type="radio" name="comments" id="comment1" checked />
             <label for="comment1"></label>
           </div>
           <div class="element__item">
@@ -541,6 +541,22 @@
             <input type="radio" name="comments" id="comment4" />
             <label for="comment4"></label>
           </div>
+        </div>
+      </section>
+      <section class="contact m_top139 contact__container" id='contact'>
+        <header class="contact__heading">
+          <h2 class="contact__heading-title">Lets Design Together</h2>
+          <p class="contact__heading-description">
+            Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa
+            nibh lectus <br />
+            netus in. Aliquet donec morbi convallis pretium
+          </p>
+        </header>
+        <div class="contact__form">
+          <input type="text" placeholder="Enter Your Email" />
+          <button class="contact__form-button main__button">
+            <span class='contact__form-button-text'>Contact Me</span>
+          </button>
         </div>
       </section>
     </main>

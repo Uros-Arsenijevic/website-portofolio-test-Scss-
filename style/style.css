@@ -140,13 +140,13 @@ table {
   border-spacing: 0;
 }
 
-.desktop-menu__button, .header__content .logo {
+.main__button, .logo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.desktop-menu__button {
+.main__button {
   background-color: rgb(253, 111, 0);
   color: #fff;
   border-radius: 5px;
@@ -163,7 +163,7 @@ table {
   overflow-x: hidden;
 }
 
-.testimonials__title, .projects__header-heading, .list__description-title, .services__content .services__heading-title, .aboutMe__title, .main-title, .content__title {
+.contact__heading-title, .testimonials__title, .projects__header-heading, .list__description-title, .services__content .services__heading-title, .aboutMe__title, .main-title, .content__title {
   font-size: 65px;
   font-family: "Poppins";
   font-weight: 600;
@@ -172,7 +172,7 @@ table {
   color: #000;
 }
 
-.comment__text, .testimonials__description, .project__item-title-name, .project__item-title-category, .projects__header-description, .list__description-description, .services__content .services__heading-description, .aboutMe__heading p, .content__description {
+.contact__form input::placeholder, .contact__heading-description, .comment__text, .testimonials__description, .project__item-title-name, .project__item-title-category, .projects__header-description, .list__description-description, .services__content .services__heading-description, .aboutMe__heading p, .content__description {
   font-family: "Poppins";
   font-size: 21px;
   font-weight: 400;
@@ -181,7 +181,7 @@ table {
   color: #000;
 }
 
-.testimonials__header, .testimonials, .project__item-title, .project__item, .projects__project, .projects {
+.contact__heading, .contact, .testimonials__header, .testimonials, .project__item-title, .project__item, .projects__project, .projects {
   display: flex;
   flex-direction: column;
 }
@@ -216,32 +216,18 @@ body {
 }
 
 .header {
-  padding-top: 61px;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  background: #fff;
+  height: 90px;
+  align-content: center;
 }
 .header__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.header__content .logo {
-  color: rgb(66, 66, 66);
-  font-size: 48px;
-  font-family: "Montserrat";
-  gap: 20px;
-}
-.header__content .logo .logo__circle {
-  width: 66px;
-  height: 66px;
-  background-color: rgb(253, 111, 0);
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-}
-.header__content .logo .logo__title::first-letter {
-  color: #000;
-  font-weight: bold;
 }
 .header__content .desktop-menu {
   max-width: 900px;
@@ -351,11 +337,32 @@ body {
   cursor: pointer;
 }
 
-.desktop-menu__button {
+.logo {
+  color: rgb(66, 66, 66);
+  font-size: 48px;
+  font-family: "Montserrat";
+  gap: 20px;
+}
+.logo .logo__circle {
+  width: 66px;
+  height: 66px;
+  background-color: rgb(253, 111, 0);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.logo .logo__title::first-letter {
+  color: #000;
+  font-weight: bold;
+}
+
+.main__button {
   font-weight: 400;
   position: relative;
 }
-.desktop-menu__button span {
+.main__button span {
   position: absolute;
   z-index: 2;
   transition: ease-in-out 0.3s;
@@ -364,7 +371,7 @@ body {
   -ms-transition: ease-in-out 0.3s;
   -o-transition: ease-in-out 0.3s;
 }
-.desktop-menu__button::before {
+.main__button::before {
   content: "";
   width: 50%;
   height: 100%;
@@ -383,7 +390,7 @@ body {
   -ms-transition: ease-in-out 0.3s;
   -o-transition: ease-in-out 0.3s;
 }
-.desktop-menu__button::after {
+.main__button::after {
   content: "";
   width: 50%;
   height: 100%;
@@ -402,21 +409,21 @@ body {
   -ms-transition: ease-in-out 0.3s;
   -o-transition: ease-in-out 0.3s;
 }
-.desktop-menu__button:hover::before {
+.main__button:hover::before {
   transform: translate(0);
   -webkit-transform: translate(0);
   -moz-transform: translate(0);
   -ms-transform: translate(0);
   -o-transform: translate(0);
 }
-.desktop-menu__button:hover::after {
+.main__button:hover::after {
   transform: translate(-1px);
   -webkit-transform: translate(-1px);
   -moz-transform: translate(-1px);
   -ms-transform: translate(-1px);
   -o-transform: translate(-1px);
 }
-.desktop-menu__button:hover span {
+.main__button:hover span {
   color: rgb(253, 111, 0);
 }
 
@@ -574,14 +581,15 @@ body {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
 }
-.picture__social-network ol {
+
+.social-network ol {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 25px;
   font-size: 32px;
 }
-.picture__social-network ol a {
+.social-network ol a {
   color: #000;
   transition: ease-in-out 0.2s;
   -webkit-transition: ease-in-out 0.2s;
@@ -589,7 +597,7 @@ body {
   -ms-transition: ease-in-out 0.2s;
   -o-transition: ease-in-out 0.2s;
 }
-.picture__social-network ol a:hover {
+.social-network ol a:hover {
   color: rgb(253, 111, 0);
 }
 
@@ -1008,6 +1016,63 @@ body {
 }
 .element__item input[type=radio]:checked + label {
   background-color: rgb(253, 111, 0);
+}
+
+.contact {
+  gap: 48px;
+  align-items: center;
+}
+.contact__heading {
+  gap: 15px;
+  align-items: center;
+}
+.contact__heading-description {
+  text-align: center;
+}
+.contact__form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: none;
+  gap: 25px;
+  height: 75px;
+}
+.contact__form input {
+  max-width: 627px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(175, 175, 175);
+  background: rgb(248, 248, 248);
+  outline: none;
+  border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+  color: rgb(253, 111, 0);
+  font-size: 21px;
+  padding-left: 26px;
+  font-family: "Poppins";
+}
+.contact__form input::placeholder {
+  color: rgb(121, 121, 121);
+}
+.contact__form-button {
+  max-width: 222px;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  -webkit-border-radius: 14px;
+  -moz-border-radius: 14px;
+  -ms-border-radius: 14px;
+  -o-border-radius: 14px;
+}
+.contact__form-button-text {
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 3%;
 }
 
 /*# sourceMappingURL=style.css.map */

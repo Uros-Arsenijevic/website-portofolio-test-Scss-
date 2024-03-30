@@ -1,31 +1,14 @@
 .header {
-  padding-top: 61px;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  background: #fff;
+  height: 90px;
+  align-content: center;
   &__content {
     @include d-flex(flex, space-between, center);
 
-    .logo {
-      color: rgb(66, 66, 66);
-      font-size: 48px;
-      font-family: $Montserrat-font;
-      @extend %df_center;
-      gap: 20px;
-
-      .logo__circle {
-        width: 66px;
-        height: 66px;
-        background-color: $main-color;
-        border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
-      }
-
-      .logo__title::first-letter {
-        color: $text-color;
-        font-weight: bold;
-      }
-    }
     .desktop-menu {
       max-width: 900px;
       width: 100%;
@@ -70,7 +53,6 @@
           }
         }
       }
-
     }
 
     .mobile-nav {
@@ -135,7 +117,31 @@
     }
   }
 }
-.desktop-menu__button {
+.logo {
+  color: rgb(66, 66, 66);
+  font-size: 48px;
+  font-family: $Montserrat-font;
+  @extend %df_center;
+  gap: 20px;
+
+  .logo__circle {
+    width: 66px;
+    height: 66px;
+    background-color: $main-color;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+
+  .logo__title::first-letter {
+    color: $text-color;
+    font-weight: bold;
+  }
+}
+
+.main__button {
   @extend %button;
   font-weight: 400;
   position: relative;

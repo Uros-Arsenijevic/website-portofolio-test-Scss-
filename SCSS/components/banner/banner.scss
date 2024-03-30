@@ -88,19 +88,19 @@
     }
   }
 
-  &__social-network {
-    ol {
-      @include d-flex(flex, center, center);
-      gap: 25px;
-      font-size: 32px;
+}
+.social-network {
+  ol {
+    @include d-flex(flex, center, center);
+    gap: 25px;
+    font-size: 32px;
 
-      a {
-        color: $text-color;
-        @include transition(0.2s);
+    a {
+      color: $text-color;
+      @include transition(0.2s);
 
-        &:hover {
-          color: $main-color;
-        }
+      &:hover {
+        color: $main-color;
       }
     }
   }
