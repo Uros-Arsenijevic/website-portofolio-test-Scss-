@@ -21,7 +21,6 @@
 
 @include laptop-L {
   .header {
-    padding-top: 20px;
     .logo {
       gap: 10px;
       .logo__circle {
@@ -61,7 +60,7 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1028px) {
   .desktop-menu {
     display: none !important;
   }

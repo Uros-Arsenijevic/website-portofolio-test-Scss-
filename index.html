@@ -20,6 +20,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- anime css lib -->
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" />
     <!-- CSS -->
     <link rel="stylesheet" href="style/style.css" />
     <!-- JS -->
@@ -52,32 +54,43 @@
             <div class="mobile-nav__icon">
               <i class="fa-solid fa-bars"></i>
             </div>
-
             <div class="mobile-menu">
               <div class="mobile-menu__close">
-                <span><i class="fa-solid fa-xmark"></i></span>
+                <span class='close__button'><i class="fa-solid fa-xmark"></i></span>
               </div>
               <ul class="mobile-menu__list">
                 <li class="mobile-menu__item">
-                  <i class="fa-solid fa-house"></i>
-                  Home
+                  <a href="#">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                  </a>
                 </li>
                 <li class="mobile-menu__item">
-                  <i class="fa-solid fa-address-card"></i>
-                  About Me
+                  <a href="#aboutMe">
+                    <i class="fa-solid fa-address-card"></i>
+                    About Me
+                  </a>
                 </li>
                 <li class="mobile-menu__item">
-                  <i class="fa-solid fa-bell-concierge"></i>
-                  Services
+                  <a href="#services">
+                    <i class="fa-solid fa-bell-concierge"></i>
+                    Services
+                  </a>
                 </li>
                 <li class="mobile-menu__item">
-                  <i class="fa-solid fa-diagram-project"></i>
-                  Projects
+                  <a href="#projects">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    Projects
+                  </a>
                 </li>
-                <li class="mobile-menu__item">Testimonials</li>
                 <li class="mobile-menu__item">
-                  <i class="fa-solid fa-phone"></i>
-                  Contact
+                  <a href="#testimonials">Testimonials</a>
+                </li>
+                <li class="mobile-menu__item">
+                  <a href="#contact">
+                    <i class="fa-solid fa-phone"></i>
+                    Contact
+                  </a>
                 </li>
                 <button class="mobile-menu__button">
                   <i class="fa-solid fa-cloud-arrow-down"></i>
@@ -109,9 +122,11 @@
                 <br />
                 Turpis tempus pharetra
               </p>
-              <button class="main__button">
-                <span>Here Me</span>
-              </button>
+              <div class='main__button-container'>
+                <button class="main__button">
+                  <span>Here Me</span>
+                </button>
+              </div>
             </div>
             <div class="picture">
               <img src="/picture/person1.2.png" alt="" />

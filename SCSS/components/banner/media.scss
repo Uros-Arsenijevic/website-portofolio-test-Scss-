@@ -1,0 +1,14 @@
+@include laptop-L() {
+
+}
+@include laptop {
+  .content {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60px;
+  }
+  .picture {
+    margin-top: 100px;
+    margin-left: 0;
+  }
+}

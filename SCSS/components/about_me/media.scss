@@ -1,0 +1,27 @@
+@include laptop-L() {
+  .picture {
+    margin-right: 20px;
+  }
+}
+@include laptop() {
+  
+  .aboutMe__content {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    gap: 50px;
+  }
+  .aboutMe__heading {
+    .aboutMe__title {
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+  }
+  .content__description {
+    text-align: center;
+  }
+  .main__button-container {
+    justify-content: center;
+  }
+}

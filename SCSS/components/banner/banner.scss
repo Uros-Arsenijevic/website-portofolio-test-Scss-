@@ -27,7 +27,10 @@
     margin-top: 28px;
   }
 }
-
+.main__button-container {
+  display: flex;
+  justify-content: start;
+}
 .main-title {
   display: flex;
   flex-direction: column;
@@ -87,7 +90,6 @@
       -o-transform: translate(-50%, -50%);
     }
   }
-
 }
 .social-network {
   ol {
