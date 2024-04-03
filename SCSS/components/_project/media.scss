@@ -1,0 +1,14 @@
+@include laptop() {
+  .project {
+    justify-content: space-around;
+  }
+}
+@include tablet() {
+  .projects__project-nav {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .projects__header-description {
+    font-size: 17px;
+  }
+}

@@ -46,7 +46,6 @@
   @include radius(14px);
   gap: 29px;
   background: $content-color;
-  opacity: 0.5;
   padding: 0 72px;
 }
 .comment {
@@ -84,9 +83,6 @@
     line-height: 29px;
     letter-spacing: 2%;
   }
-}
-.slider-item_active {
-  opacity: 1;
 }
 .element {
   @include d-flex(flex, center, none);

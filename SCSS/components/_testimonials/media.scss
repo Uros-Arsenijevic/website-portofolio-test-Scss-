@@ -1,0 +1,14 @@
+@include laptop() {
+  .slider-item {
+    width: 900px;
+  }
+  .slider__track {
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 1014px) {
+  .slider__track {
+    padding-left: 40px;
+  }
+}

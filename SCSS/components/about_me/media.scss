@@ -1,10 +1,17 @@
-@include laptop-L() {
-  .picture {
-    margin-right: 20px;
+@media (max-width: 1300px) and (min-width: 1100px) {
+  .aboutMe__title {
+    text-align: center;
+  }
+  .aboutMe__heading p {
+    text-align: center;
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .aboutMe__content {
+    justify-content: space-around;
   }
 }
 @include laptop() {
-  
   .aboutMe__content {
     flex-wrap: wrap-reverse;
     justify-content: center;

@@ -608,11 +608,36 @@ body {
   color: rgb(253, 111, 0);
 }
 
+@media (max-width: 1440px) {
+  .picture {
+    margin: 0 30px;
+  }
+}
+@media (max-width: 1300px) and (min-width: 1100px) {
+  .content__heading {
+    max-width: 600px;
+  }
+  .content__heading .content__title {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .content__heading .content__title span {
+    font-size: 25px;
+  }
+  .content__heading .main-title {
+    font-size: 80px;
+  }
+  .content__heading .content__description {
+    font-size: 15px;
+    line-height: 26px;
+  }
+}
 @media (max-width: 1100px) {
   .content {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 60px;
+    gap: 30px;
   }
   .picture {
     margin-top: 100px;
@@ -779,9 +804,17 @@ body {
   gap: 18px;
 }
 
-@media (max-width: 1440px) {
-  .picture {
-    margin-right: 20px;
+@media (max-width: 1300px) and (min-width: 1100px) {
+  .aboutMe__title {
+    text-align: center;
+  }
+  .aboutMe__heading p {
+    text-align: center;
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .aboutMe__content {
+    justify-content: space-around;
   }
 }
 @media (max-width: 1100px) {
@@ -826,7 +859,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 31px;
-  overflow: scroll;
+  flex-wrap: wrap;
 }
 .list__item {
   display: flex;
@@ -952,6 +985,20 @@ body {
   line-height: 36px;
 }
 
+@media (max-width: 1100px) {
+  .project {
+    justify-content: space-around;
+  }
+}
+@media (max-width: 860px) {
+  .projects__project-nav {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .projects__header-description {
+    font-size: 17px;
+  }
+}
 .testimonials {
   gap: 72px;
 }
@@ -994,7 +1041,6 @@ body {
   -o-border-radius: 14px;
   gap: 29px;
   background: rgb(248, 248, 248);
-  opacity: 0.5;
   padding: 0 72px;
 }
 
@@ -1028,10 +1074,6 @@ body {
   letter-spacing: 2%;
 }
 
-.slider-item_active {
-  opacity: 1;
-}
-
 .element {
   display: flex;
   justify-content: center;
@@ -1060,6 +1102,19 @@ body {
   background-color: rgb(253, 111, 0);
 }
 
+@media (max-width: 1100px) {
+  .slider-item {
+    width: 900px;
+  }
+  .slider__track {
+    padding-left: 100px;
+  }
+}
+@media (max-width: 1014px) {
+  .slider__track {
+    padding-left: 40px;
+  }
+}
 .contact {
   gap: 48px;
   align-items: center;

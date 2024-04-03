@@ -22,7 +22,7 @@
 .list {
   @include d-flex(flex, center, center);
   gap: 31px;
-  overflow: scroll;
+  flex-wrap: wrap;
 
   &__item {
     display: flex;
