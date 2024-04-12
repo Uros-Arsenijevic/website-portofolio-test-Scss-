@@ -38,3 +38,26 @@
     margin-left: 0;
   }
 }
+
+@include tablet(){
+  .main-title{
+    flex-direction: row;
+    gap: 20px;
+    font-size: 70px;
+    justify-content: center;
+  }
+  .content__description{
+    font-size: 18px;
+    margin-top: 18px;
+  }
+  .content__title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+    span{
+      font-size: 24px;
+    }
+  }
+}

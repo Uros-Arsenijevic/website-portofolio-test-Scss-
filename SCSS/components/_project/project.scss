@@ -7,7 +7,7 @@
     flex-direction: column;
     gap: 22px;
 
-    &-heading {
+    &-title {
       @extend %heading;
       color: rgb(30, 30, 30);
     }

@@ -32,3 +32,33 @@
     justify-content: center;
   }
 }
+
+@include tablet() {
+  .aboutMe__heading {
+    .aboutMe__title {
+      line-height: 60px;
+    }
+
+  }
+
+  .aboutMe {
+    .picture {
+      &::before {
+        width: 316px;
+        height: 71px;
+        left: 14%;
+        top: 12%;
+      }
+
+      > img {
+        display: none;
+      }
+
+      &__content,
+      &__content > img {
+        width: 450px;
+        height: 450px;
+      }
+    }
+  }
+}

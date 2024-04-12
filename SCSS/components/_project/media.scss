@@ -1,14 +1,24 @@
+@include laptop-L() {
+  .project {
+    justify-content: space-evenly;
+  }
+}
 @include laptop() {
   .project {
     justify-content: space-around;
   }
-}
-@include tablet() {
   .projects__project-nav {
     flex-wrap: wrap;
     gap: 30px;
   }
+}
+
+@include tablet() {
+  // .projects__header-title{
+  //   font-size: 55px;
+  // }
+
   .projects__header-description {
-    font-size: 17px;
+    font-size: 18px;
   }
 }

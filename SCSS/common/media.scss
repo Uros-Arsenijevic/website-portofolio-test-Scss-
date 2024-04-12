@@ -1,0 +1,9 @@
+@include tablet(){
+  h2[class $= "title"]{
+    font-size: 55px;
+  }
+  
+  p[class $= "description"]{
+    font-size: 18px !important;
+  }
+}
